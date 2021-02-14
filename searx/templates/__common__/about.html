@@ -1,102 +1,55 @@
 <div{% if rtl %} dir="ltr"{% endif %}>
-  <h1>About <a href="{{ url_for('index') }}">searx</a></h1>
+  <h1>Что такое <a href="{{ url_for('index') }}">searx</a>?</h1>
 
   <p>
-    Searx is a <a href="https://en.wikipedia.org/wiki/Metasearch_engine">metasearch engine</a>,
-    aggregating the results of other <a href="{{ url_for('preferences') }}">search engines</a>
-    while not storing information about its users.
+    Searx — это свободная <a href="">метапоисковая система</a>, объединяющая результаты других поисковых систем, 
+    но не хранящая информацию о своих пользователях.
   </p>
-
-  <p>More about searx...</p>
-
-  <ul>
-    <li><a href="https://github.com/searx/searx">github</a></li>
-    <li><a href="https://twitter.com/Searx_engine">twitter</a></li>
-    <li>IRC: #searx @ freenode (<a href="https://kiwiirc.com/client/irc.freenode.com/searx">webclient</a>)</li>
-    <li><a href="https://www.transifex.com/projects/p/searx/">transifex</a></li>
-  </ul>
 
   <hr />
 
-  <h2>Why use searx?</h2>
+  <h2>Зачем использовать Searx?</h2>
 
   <ul>
     <li>
-      Searx may not offer you as personalised results as Google, but it doesn't
-      generate a profile about you.
+        Searx объединяет в своей поисковой выдаче результаты поиск сразу в 
+        нескольких поисковиках: Google, DuckDuckGo и т.д.
     </li>
     <li>
-      Searx doesn't care about what you search for, never shares anything with a
-      third party, and it can't be used to compromise you.
+        Searx отсеивает рекламу, предоставляя только результат поиска.
     </li>
     <li>
-      Searx is free software, the code is 100% open and you can help to make it
-      better.  See more on <a href="https://github.com/searx/searx">github</a>.
+        Searx никогда не передаст ваши данные третьим лицам, поскольку 
+        Searx ни в каком виде не сохраняет информацию о вас.
+    </li>
+    <li>
+        Searx не сохраняет поисковые запросы в истории вашего браузера.
+    </li>
+    <li>
+        Searx предоставляет удобную поисковую выдачу для разработчиков. 
+        Любой желающий может запросить результаты поиска в форматах json, csv или rss.
     </li>
   </ul>
 
   <p>
-    If you do care about privacy, want to be a conscious user, or otherwise
-    believe in digital freedom, make searx your default search engine or run it
-    on your own server
+    Если вы действительно заботитесь о конфиденциальности, хотите быть осознанным 
+    пользователем или иным образом верите в цифровую свободу, сделайте Roughs Searx 
+    своей поисковой системой по умолчанию.
   </p>
 
-  <h2>Technical details - How does it work?</h2>
+  <h2 id='add to browser'>Как настроить поисковую систему по умолчанию?</h2>
 
   <p>
-    Searx is a <a href="https://en.wikipedia.org/wiki/Metasearch_engine">metasearch engine</a>,
-    inspired by the <a href="https://beniz.github.io/seeks/">seeks project</a>.
-
-    It provides basic privacy by mixing your queries with searches on other
-    platforms without storing search data. Queries are made using a POST request
-    on every browser (except Chromium-based browsers*).  Therefore they show up 
-    in neither our logs, nor your url history. In the case of Chromium-based
-    browser users there is an exception: searx uses the search bar to perform GET
-    requests.
-    
-    Searx can be added to your browser's search bar; moreover, it can be set as
-    the default search engine.
-  </p>
-
-  <h2 id='add to browser'>How to set as the default search engine?</h2>
-
-  <p>
-    Searx supports <a href="https://github.com/dewitt/opensearch/blob/master/opensearch-1-1-draft-6.md">OpenSearch</a>.
-    For more information on changing your default search engine, see your browser's documentation:
+    Searx поддерживает <a href="https://github.com/dewitt/opensearch/blob/master/opensearch-1-1-draft-6.md">OpenSearch</a>.
+    Дополнительную информацию об изменении поисковой системы по умолчанию 
+    вы можете получить из документации вашего браузера: 
   </p>
 
   <ul>
-    <li><a href="https://support.mozilla.org/en-US/kb/add-or-remove-search-engine-firefox">Firefox</a></li>
-    <li><a href="https://support.microsoft.com/en-us/help/4028574/microsoft-edge-change-the-default-search-engine">Microsoft Edge</a></li>
-    <li>Chromium-based browsers <a href="https://www.chromium.org/tab-to-search">only add websites that the user navigates to without a path.</a>
+    <li><a href="https://support.mozilla.org/ru/kb/izmenenie-nastroek-poiska-po-umolchaniyu-v-firefox">Firefox</a></li>
+    <li><a href="https://support.microsoft.com/ru-ru/microsoft-edge/%D0%B8%D0%B7%D0%BC%D0%B5%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5-%D0%BF%D0%BE%D0%B8%D1%81%D0%BA%D0%BE%D0%B2%D0%BE%D0%B9-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D1%8B-%D0%BF%D0%BE-%D1%83%D0%BC%D0%BE%D0%BB%D1%87%D0%B0%D0%BD%D0%B8%D1%8E-%D0%B2-microsoft-edge-cccaf51c-a4df-a43e-8036-d4d2c527a791">Microsoft Edge</a></li>
+    <li><a href="https://support.google.com/chrome/answer/95426?co=GENIE.Platform%3DDesktop&hl=ru">Браузеры на основе Chromium</a></li>
   </ul>
-
-  <h2>Where to find anonymous usage statistics of this instance ?</h2>
-
-  <p>
-    <a href="{{ url_for('stats') }}">Stats page</a> contains some useful data about the engines used.
-  </p>
-
-  <h2>How can I make it my own?</h2>
-
-  <p>
-    Searx appreciates your concern regarding logs, so take the
-    code from the <a href="https://github.com/searx/searx">original searx project</a> and
-    run it yourself!
-  </p>
-  <p>
-    Add your searx instance to this <a href="{{ brand.PUBLIC_INSTANCES }}"> list
-    of public searx instances</a> to help other people reclaim their privacy and
-    make the Internet freer! The more decentralized the Internet is, the more
-    freedom we have!
-  </p>
-
-  <h2>Where are the docs & code of this instance?</h2>
-
-  <p>
-    See the <a href="{{ brand.DOCS_URL }}">{{ brand.DOCS_URL }}</a>
-    and <a href="{{ brand.GIT_URL }}">{{ brand.GIT_URL }}</a>
-  </p>
 
 </div>
 {% include "__common__/aboutextend.html" ignore missing %}
