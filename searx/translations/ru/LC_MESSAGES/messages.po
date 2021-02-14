@@ -1,3 +1,35 @@
+Skip to content
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@roughs-team 
+roughs-team
+/
+searx
+forked from searx/searx
+0
+01.3k
+Code
+Pull requests
+Actions
+Projects
+Wiki
+Security
+Insights
+Settings
+searx/searx/translations/ru/LC_MESSAGES/messages.po
+@asciimoo
+asciimoo [enh] update translations
+Latest commit b7d2597 on 9 Jul 2020
+ History
+ 5 contributors
+@asciimoo@kvch@pointhi@mikhirev@Cqoicebordel
+1087 lines (888 sloc)  37.2 KB
+  
 # Translations template for PROJECT.
 # Copyright (C) 2020 ORGANIZATION
 # This file is distributed under the same license as the PROJECT project.
@@ -636,19 +668,19 @@ msgstr "уважающая вашу приватность, открытая м�
 
 #: searx/templates/oscar/base.html:86 searx/templates/simple/base.html:55
 msgid "Source code"
-msgstr ""
+msgstr "Исходный код"
 
 #: searx/templates/oscar/base.html:87 searx/templates/simple/base.html:56
 msgid "Issue tracker"
-msgstr ""
+msgstr "Сообщить о проблеме"
 
 #: searx/templates/oscar/base.html:88 searx/templates/simple/base.html:57
 msgid "Public instances"
-msgstr ""
+msgstr "Другие реализации"
 
 #: searx/templates/oscar/languages.html:1
 msgid "Language"
-msgstr ""
+msgstr "Язык"
 
 #: searx/templates/oscar/macros.html:28 searx/templates/oscar/macros.html:40
 #: searx/templates/simple/macros.html:28
@@ -1085,3 +1117,15 @@ msgstr "Приватность"
 #: searx/templates/simple/result_templates/map.html:35
 msgid "Loading..."
 msgstr ""
+© 2021 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
